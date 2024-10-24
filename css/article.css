@@ -13,12 +13,18 @@
   cursor: pointer;
   display: flex;
   font-size: 12px;
+  position: relative;
 }
 .article_detail img {
+  cursor: pointer;
   width: 32px;
   height: 32px;
   border-radius: 100%;
   margin-right: 16px;
+}
+.article_detail_actions {
+  right: 0px;
+  position: absolute;
 }
 .article_content {
   padding: 24px 0 32px;
