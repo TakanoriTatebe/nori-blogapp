@@ -1,17 +1,18 @@
+# encoding: utf-8
 <!DOCTYPE html>
 <html>
   <head>
     <title>NoriBlogapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
-
   <body>
-  <header class="header">
+    <header class="header">
       <p class="header_pageTitle">新着記事</p>
       <div class="dropdown">
         <%= image_tag 'default-avatar.png', class: 'header_avatar dropbtn' %>
@@ -21,6 +22,13 @@
         </div>
       </div>
     </header>
+    <% if flash.present? %>
+      <div class="flash">
+        <% flash.each do |key, value| %>
+          <div class="<%= key %>"> <%= value %></div>
+        <% end %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
