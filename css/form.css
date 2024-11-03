@@ -1,4 +1,5 @@
-input.text {
+input.text,
+select.text {
   width: 100%;
   margin: 8px 0px;
   padding: 16px 24px;
